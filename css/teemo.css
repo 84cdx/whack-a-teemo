@@ -3,7 +3,7 @@ body {
 	color: white;
 	text-align: center;
 	text-shadow: 2px 2px #000000;
-	background: url("./lol-wild-rift-yordle-teemo-tristana-kennen-corki-lulu-uhdpaper.com-hd-5.2972.jpg");
+	background: url("/assets/background/lol-wild-rift-yordle-teemo-tristana-kennen-corki-lulu-uhdpaper.com-hd-5.2972.jpg");
 	background-size: cover;
 }
 
@@ -13,7 +13,7 @@ body {
 	margin: 20px auto;
 	display: flex;
 	flex-wrap: wrap;
-	background: url("./f3c2604a3cebffc98d6882a30f8787ff.jpg");
+	background: url("/assets/field/f3c2604a3cebffc98d6882a30f8787ff.jpg");
 	background-size: cover;
 	border: 3px solid white;
 	border-radius: 25px;
@@ -24,7 +24,7 @@ body {
 
 	width: 200px;
 	height: 180px;
-	background-image: url("./Hole-PNG-Free-Download.png");
+	background-image: url("/assets/field/Hole-PNG-Free-Download.png");
 	background-size: 160px 144px;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -53,12 +53,12 @@ button {
 }
 
 .overlay-container {
-  position: fixed;
-  display: none;
-  justify-content: center;
-  align-items:center;
-  width: 2120px;
-  height: 540px;
+	position: fixed;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	width: 2120px;
+	height: 540px;
 }
 
 #restart {

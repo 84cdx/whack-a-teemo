@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Whack a Teemo</title>
-		<link rel="stylesheet" href="teemo.css">
-		<script src = "teemo.js"></script>
-	</head>
-	<body>
-		<h1>Whack-a-Teemo</h1>
-		<h3 id = "scoretext">SCORE:</h3>
-		<h2 id = "score">0</h2>
-		<!-- 3x3 -->
-		<div id = "container1" class = "overlay-container">
-			<button id = "restart" onclick = "restart()" type = button>Restart</button>
-		</div>
-		<div id = "container2" class = "overlay-container">
-			<button id = "restart" onclick = "buttonStart()" type = button>Start</button>
-		</div>
-		<div id="board"></div>
-		<button id ="easy" onclick = "buttonColor(this.id)" type = "button">Easy</button>
-		<button id ="medium" onclick = "buttonColor(this.id)" type = "button">Medium</button>
-		<button id ="hard" onclick = "buttonColor(this.id)" type = "button">Hard</button>
-	</body>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Whack-a-Teemo</title>
+	<link rel="stylesheet" href="css/teemo.css">
+	<script src="javascript/teemo.js"></script>
+</head>
+
+<body>
+	<h1>Whack-a-Teemo</h1>
+	<h3 id="scoretext">SCORE:</h3>
+	<h2 id="score">0</h2>
+	<!-- 3x3 -->
+	<div id="container1" class="overlay-container">
+		<button id="restart" onclick="restart()" type=button>Restart</button>
+	</div>
+	<div id="container2" class="overlay-container">
+		<button id="restart" onclick="buttonStart()" type=button>Start</button>
+	</div>
+	<div id="board"></div>
+	<button id="easy" onclick="buttonColor(this.id)" type="button">Easy</button>
+	<button id="medium" onclick="buttonColor(this.id)" type="button">Medium</button>
+	<button id="hard" onclick="buttonColor(this.id)" type="button">Hard</button>
+</body>
+
 </html>

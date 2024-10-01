@@ -9,13 +9,13 @@ let teemoTimer = 620;
 let shaco1Timer = 1000;
 let shaco2Timer = 1400;
 
-window.onload = function(){
+window.onload = function () {
 	setGame();
 	document.getElementById("container2").style.display = "flex";
 }
 
-function setGame(){
-	for (let i = 0; i < 9; i++){
+function setGame() {
+	for (let i = 0; i < 9; i++) {
 		let tile = document.createElement("div");
 		tile.id = i.toString();
 		tile.addEventListener("click", selectTile);
@@ -26,16 +26,16 @@ function setGame(){
 	document.getElementById("medium").addEventListener("click", mediumGame)
 	document.getElementById("hard").addEventListener("click", hardGame)
 
-	
+
 }
 
-function buttonStart(){
+function buttonStart() {
 	document.getElementById("container2").style.display = "none";
 	startGame(difficulty);
 
 }
 
-function startGame(difficulty){
+function startGame(difficulty) {
 
 	refreshID1 = setInterval(setTeemo, teemoTimer);
 	refreshID2 = setInterval(setShaco1, shaco1Timer);
@@ -45,11 +45,11 @@ function startGame(difficulty){
 
 }
 
-function resetGame(){
+function resetGame() {
 	return;
 }
 
-function easyGame(){
+function easyGame() {
 
 	let difficulty = "easy";
 	teemoTimer = 900;
@@ -61,7 +61,7 @@ function easyGame(){
 	startGame(difficulty);
 }
 
-function mediumGame(){
+function mediumGame() {
 
 	let difficulty = "medium";
 	teemoTimer = 620;
@@ -73,7 +73,7 @@ function mediumGame(){
 	startGame(difficulty);
 }
 
-function hardGame(){
+function hardGame() {
 
 	let difficulty = "hard";
 	teemoTimer = 510;
@@ -85,7 +85,7 @@ function hardGame(){
 	startGame(difficulty);
 }
 
-function getRandomTile(){
+function getRandomTile() {
 
 	let num = Math.floor(Math.random() * 9);
 	return num.toString();
@@ -94,28 +94,28 @@ function getRandomTile(){
 
 function setTeemo() {
 
-	if (gameOver){
+	if (gameOver) {
 		return;
 	}
 
-	if(currentTeemoTile){
+	if (currentTeemoTile) {
 		currentTeemoTile.innerHTML = "";
 	}
 
 	let teemo = document.createElement("img");
-	teemo.src = "./toppng.com-ersonagens-de-lol-png-teemo-transparent-601x575.png";
+	teemo.src = "/assets/enemies/toppng.com-ersonagens-de-lol-png-teemo-transparent-601x575.png";
 
 	let num = getRandomTile();
 
-	if ((currentShaco1Tile && currentShaco1Tile.id == num) || (currentShaco2Tile && currentShaco2Tile.id == num)) {return;}
+	if ((currentShaco1Tile && currentShaco1Tile.id == num) || (currentShaco2Tile && currentShaco2Tile.id == num)) { return; }
 
 	currentTeemoTile = document.getElementById(num);
 	currentTeemoTile.appendChild(teemo);
 	teemoClicked = true;
 }
 
-function buttonColor(id){
-	switch (id){
+function buttonColor(id) {
+	switch (id) {
 		case "easy":
 			document.getElementById("medium").style.backgroundColor = "white";
 			document.getElementById("hard").style.backgroundColor = "white";
@@ -136,20 +136,20 @@ function buttonColor(id){
 
 function setShaco1() {
 
-	if (gameOver){
+	if (gameOver) {
 		return;
 	}
 
-	if(currentShaco1Tile){
+	if (currentShaco1Tile) {
 		currentShaco1Tile.innerHTML = "";
 	}
 
 	let shaco1 = document.createElement("img");
-	shaco1.src = "./Springteufel_Render.webp";
+	shaco1.src = "/assets/enemies/Springteufel_Render.webp";
 
 	let num = getRandomTile();
 
-	if ((currentTeemoTile && currentTeemoTile.id == num) || (currentShaco2Tile && currentShaco2Tile.id == num)) {return;}
+	if ((currentTeemoTile && currentTeemoTile.id == num) || (currentShaco2Tile && currentShaco2Tile.id == num)) { return; }
 
 
 	currentShaco1Tile = document.getElementById(num);
@@ -158,35 +158,35 @@ function setShaco1() {
 
 function setShaco2() {
 
-	if (gameOver){
+	if (gameOver) {
 		return;
 	}
 
-	if(currentShaco2Tile){
+	if (currentShaco2Tile) {
 		currentShaco2Tile.innerHTML = "";
 	}
 
 	let shaco2 = document.createElement("img");
-	shaco2.src = "./Springteufel_Render.webp";
+	shaco2.src = "/assets/enemies/Springteufel_Render.webp";
 
 	let num = getRandomTile();
 
-	if ((currentTeemoTile && currentTeemoTile.id == num) || (currentShaco1Tile && currentShaco1Tile.id == num)) {return;}
+	if ((currentTeemoTile && currentTeemoTile.id == num) || (currentShaco1Tile && currentShaco1Tile.id == num)) { return; }
 
 
 	currentShaco2Tile = document.getElementById(num);
 	currentShaco2Tile.appendChild(shaco2);
 }
 
-function selectTile(){
+function selectTile() {
 
-	if (gameOver){
+	if (gameOver) {
 		return;
 	}
 
 	if (this == currentTeemoTile) {
-		
-		if (teemoClicked){
+
+		if (teemoClicked) {
 			score += 10;
 		}
 		teemoClicked = false;
@@ -208,7 +208,7 @@ function selectTile(){
 	}
 }
 
-function restart(){
+function restart() {
 	document.getElementById("container1").style.display = "none";
 	gameOver = false;
 	score = 0;
