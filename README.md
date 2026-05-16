@@ -1,7 +1,8 @@
-
 # Whack-a-Teemo
 
 Whack-a-Teemo is a simple web-based game inspired by the classic "Whack-a-Mole." In this game, players must click on Teemo as he appears on the board to earn points, while avoiding Shaco. The game was developed as a practice project for JavaScript.
+
+<img width="494" height="572" alt="Screenshot_534" src="https://github.com/user-attachments/assets/91cfcac6-6e72-4e0e-8124-5b0df3ead1b5" />
 
 ## How to Play
 
